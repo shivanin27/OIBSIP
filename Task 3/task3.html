@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Todo App</title>
+    <style>
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        margin: 10px;
+        padding: 5px;
+        border: 1px solid black;
+      }
+      .completed {
+        text-decoration: line-through;
+        opacity: 0.5;
+      }
+      h1 {
+      color: black;
+      font-family: Avanta Garde;
+      font-weight: bold;
+      padding-top: 0.5%;
+      padding-bottom: 0.5%;
+      background-color: burlywood;
+      padding-left: 10%;
+      padding-right: 10%;
+      margin-left: 15%;
+      margin-right: 15%;
+
+}
+#label-1{
+text-align: center;
+background-color: #4f3539;
+margin-left: 2%;
+margin-right: 2%;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+padding-left: 3%;
+padding-right: 3%;
+padding-top: 0.5%;
+padding-bottom: 0.5%;
+
+}
+body {
+            background-color: beige;
+            margin-top: 5%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 15%;
+            border: #816b81 solid;
+            border-radius: 0.5%;
+            border-width: 20px;
+
+        }
+        #add-task {
+
+color: black;
+
+width: 3%;
+text-align: center;
+width: 20%;
+background-color: #816b81;
+color: black;
+font-size: x-large;
+
+
+}
+
+
+    </style>
+  </head>
+  <center>
+    <img src="todo.jpg" width="100px" height="100px">
+    <h1><u>Todo App</h1></u></center>
+    <form>
+      <center><label for="new-task" id="label-1">Enter New Task</label><br><br>
+      <input type="text" id="new-task" name="new-task"><br><br>
+      <button type="button" id="add-task">Add Task</button></center>
+    </form>
+    <h2>Tasks:</h2>
+    <ul id="task-list"></ul>
+    <h2>Completed Tasks:</h2>
+    <ul id="completed-task-list"></ul>
+    <script>
+      const taskList = document.getElementById("task-list");
+      const completedTaskList = document.getElementById("completed-task-list");
+      const addTaskButton = document.getElementById("add-task");
+
+      addTaskButton.addEventListener("click", function() {
+        const newTaskName = document.getElementById("new-task").value;
+        if (newTaskName) {
+          const newTaskItem = document.createElement("li");
+          const newTaskCheckbox = document.createElement("input");
+          newTaskCheckbox.type = "checkbox";
+          newTaskItem.appendChild(newTaskCheckbox);
+          const newTaskLabel = document.createElement("label");
+          newTaskLabel.textContent = newTaskName;
+          newTaskItem.appendChild(newTaskLabel);
+          taskList.appendChild(newTaskItem);
+          document.getElementById("new-task").value = "";
+          newTaskCheckbox.addEventListener("change", function() {
+            if (newTaskCheckbox.checked) {
+              newTaskItem.classList.add("completed");
+              completedTaskList.appendChild(newTaskItem);
+            } else {
+              newTaskItem.classList.remove("completed");
+              taskList.appendChild(newTaskItem);
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
