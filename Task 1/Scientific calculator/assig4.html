@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific calculator.</title>
+    <script src="lecone.js" defer></script>
+    <style>
+        .calci {
+            background-color: burlywood;
+            margin-top: 5%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 5%;
+            border: #92a8d1 solid;
+            border-radius: 1%;
+            border-width: 40px;
+
+        }
+        h1 {
+            text-align: center;
+            background-color: #f7786b;
+            margin-left: 2%;
+            margin-right: 2%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #sinx{
+            color: black;
+         
+            width: 3%;
+            text-align: center;
+            width: 20%;
+            background-color: #36486b;
+            color: black;
+            font-size: x-large;
+            
+        }
+        #cosx{
+            color: black;
+         
+            width: 3%;
+            text-align: center;
+            width: 20%;
+            background-color: #36486b;
+            color: black;
+            font-size: x-large;
+            
+        }
+        #tanx{
+            color: black;
+         
+            width: 3%;
+            text-align: center;
+            width: 20%;
+            background-color: #36486b;
+            color: black;
+            font-size: x-large;
+            
+        }
+        #asinx{
+            color: black;
+         
+            width: 3%;
+            text-align: center;
+            width: 20%;
+            background-color: #36486b;
+            color: black;
+            font-size: x-large;
+            
+        }
+        #acosx{
+            color: black;
+         
+            width: 3%;
+            text-align: center;
+            width: 20%;
+            background-color: #36486b;
+            color: black;
+            font-size: x-large;
+            
+        }
+        #atanx{
+            color: black;
+         
+            width: 3%;
+            text-align: center;
+            width: 20%;
+            background-color: #36486b;
+            color: black;
+            font-size: x-large;
+            
+        }
+        #sqr{
+            color: black;
+         
+            width: 3%;
+            text-align: center;
+            width: 20%;
+            background-color: #36486b;
+            color: black;
+            font-size: x-large;
+            
+        }
+        #sqrt{
+            color: black;
+         
+            width: 3%;
+            text-align: center;
+            width: 20%;
+            background-color: #36486b;
+            color: black;
+            font-size: x-large;
+            
+        }
+        #cube{
+            color: black;
+         
+            width: 3%;
+            text-align: center;
+            width: 20%;
+            background-color: #36486b;
+            color: black;
+            font-size: x-large;
+            
+        }
+        h2 {
+            text-align: center;
+            background-color: #f4e1d2;
+            margin-left: 4%;
+            margin-right: 4%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        h3 {
+            text-align: center;
+            background-color: #f7786b;
+            margin-left: 2%;
+            margin-right: 2%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            background-color: #f4e1d2;
+            text-align: center;
+            font-size: xx-large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-top: 3%;
+            margin-left: 5%;
+            margin-right: 5%;
+            border: solid   lightcoral;
+            border-width: 5px;
+            padding: 1%;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <!-- this a a file which is linked with a js file further coded in ts file  -->
+   <div class="container">
+       <u><i>SCIENTIFIC CALCULATOR.!</u><i>
+   </div>
+    <div class="calci">
+        <!-- This is a input bos in which you can enter the number. -->
+       <center> <h1>Input the number:</h1>
+        <input type="text" id="input" >
+        <br><br>
+        <!-- You can click on any of the trignometric function buttons and the action given in the ts file will be excuted  -->
+        <h2>Trignometric Functions:</h2>
+        <input type="button" id="sinx" value="sinx" onclick="sin()"/>
+        <input type="button" id="cosx" value="cosx" onclick="cos()">
+        <input type="button" id="tanx" value="tanx" onclick="tan()">
+        <br><br>
+        <!-- You can click on any of the inverse trigo functions and get the required ans in the display box -->
+        <h2>Inverse trignometric Functions:</h2>
+        <input type="button" id="asinx" value="asinx" onclick="asin()">
+        <input type="button" id="acosx" value="acosx" onclick="acos()">
+        <input type="button" id="atanx" value="atanx" onclick="atan()">
+        <br><br>
+        <!-- The given beloe functions such as square,square root and cube can be obtained -->
+        <h2>Basic Functions:</h2>
+        <input type="button" id="sqr" value="sqr" onclick="sqr()">
+        <input type="button" id="cube" value="cube" onclick="cube()">
+        <input type="button" id="sqrt" value="sqrt" onclick="sqrt()">
+        <br><br>
+        <!-- This is a answer box -->
+        <h3>Get your answer here</h3>
+        <input type="text" id="display" value="answer"></center>
+   <br><br>
+    </div>
+</body>
+</html>

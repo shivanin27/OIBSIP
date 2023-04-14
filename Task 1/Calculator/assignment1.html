@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Calculator</title>
+    <script src="lec.js" defer></script>
+    <style>
+        .btn {
+
+            color: black;
+            height: 8%;
+            width: 6%;
+            text-align: center;
+            width: 35%;
+            background-color: #36486b;
+            color: black;
+            font-size: xx-large;
+
+
+        }
+
+        .cal {
+            background-color: burlywood;
+            text-align: center;
+            padding: 3%;
+
+
+        }
+
+        body {
+            background-color: beige;
+            margin-top: 5%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 5%;
+            border: #92a8d1 solid;
+            border-radius: 1%;
+            border-width: 40px;
+
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #b5e7a0;
+            margin-left: 2%;
+            margin-right: 2%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            background-color: #f7786b;
+            margin-right: 7%;
+            margin-left: 7%;
+
+        }
+
+        h3 {
+            text-align: center;
+            background-color: #f4e1d2;
+            margin-left: 4%;
+            margin-right: 4%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The below file is linked to js file which is obtained by coding the ts file -->
+    <h1>CALCULATOR.</h1>
+    <h3>Simplify your calculations.</h3>
+    <br>
+    <!-- Here you can enter your number1 -->
+    <h2>Enter number1:</h2>
+    <center><input type="number" id="num1" /></center>
+    <br>
+    <!-- Here you can enter your number 2 -->
+    <h2> Enter number2:</h2>
+    <center><input type="number" id="num2" /></center>
+    <br>
+   <!-- All the below mathematical operations are been coded in the ts file. -->
+    <div class="cal">
+        <!-- By clicking on this button you can add the nos enter in the above text box. -->
+        <input type="button" class="btn" value="Add" onclick="addition();" />
+        <!-- By clicking on this button you can multiply  any two nos given in the text box. -->
+        <input type="button" class="btn" value="Multiply" onclick="multiplication();" />
+        <br>
+        <br>
+        <!-- By clicking on this button you can divide any two nos entered in the above text box. -->
+        <input type="button" class="btn" value="Divide" onclick="division();" />
+        <!-- By clicking on this button you can subtract any two nos entered in the text box above. -->
+        <input type="button" class="btn" value="Subtract" onclick="substraction();" />
+    </div>
+    <!-- This text box represents the ans of any operation button pressed by you. -->
+    <h2>Get your answers:</h2>
+    <center><input type="text" id="display"disabled /></center>
+    <br>
+    <br>
+</body>
